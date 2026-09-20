@@ -1,0 +1,70 @@
+import Image from "next/image";
+import { photographerData } from "@/data/about";
+
+export function ApproachSection() {
+  return (
+    <section className="w-full bg-[#FAF8F5] py-24 sm:py-32 border-t border-b border-[#2C2523]/10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header */}
+        <div className="max-w-3xl mx-auto mb-16 sm:mb-20 text-center">
+          <span className="text-[10px] sm:text-xs font-mono uppercase tracking-[0.25em] text-gold-subtle font-semibold mb-3 block">
+            HOW I WORK
+          </span>
+          <h2 className="font-serif text-3xl sm:text-5xl font-normal text-espresso-primary tracking-tight leading-[1.15] mb-4 text-center">
+            Presence, patience and restraint.
+          </h2>
+          <p className="font-sans text-sm sm:text-base text-espresso-muted font-light leading-relaxed max-w-xl mx-auto text-center">
+            The way we operate during your most vulnerable and sacred moments matters as deeply as the imagery we deliver.
+          </p>
+        </div>
+
+        {/* Editorial Process Cards with Authentic Photography */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+          {photographerData.approachSteps.map((step) => (
+            <div
+              key={step.number}
+              className="group flex flex-col bg-[#F4EFEB] rounded-lg overflow-hidden border border-[#2C2523]/10 shadow-subtle hover:shadow-editorial transition-all duration-500 hover:-translate-y-1"
+            >
+              {step.image && (
+                <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#ECE6E0]">
+                  <Image
+                    src={step.image.src}
+                    alt={step.image.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso-primary/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#FAF8F5]/90 backdrop-blur-sm text-[10px] font-mono tracking-widest text-espresso-primary uppercase font-medium">
+                    STEP {step.number}
+                  </div>
+                </div>
+              )}
+
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <div className="flex items-center justify-between border-b border-[#2C2523]/15 pb-3 mb-3">
+                    <span className="font-mono text-xl text-gold-subtle font-medium">
+                      {step.number}
+                    </span>
+                    <span className="text-xs font-mono tracking-[0.2em] uppercase text-espresso-primary font-medium">
+                      {step.keyword}
+                    </span>
+                  </div>
+
+                  <h3 className="font-serif text-lg font-medium text-espresso-primary mb-2.5 leading-snug">
+                    {step.summary}
+                  </h3>
+
+                  <p className="font-sans text-xs sm:text-sm text-espresso-muted font-light leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
