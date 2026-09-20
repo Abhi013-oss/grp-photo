@@ -63,23 +63,26 @@ export function HeroSlideshow({
       aria-live="polite"
       aria-atomic="true"
     >
-      <AnimatePresence mode="popLayout" initial={false}>
+      <AnimatePresence mode="popLayout" initial={true}>
         <motion.div
           key={currentSlide.id}
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 0, scale: 1.04 }}
           animate={{
             opacity: 1,
+            scale: 1.0,
             x: mouseOffset.x,
             y: mouseOffset.y,
             transition: {
-              opacity: { duration: shouldReduceMotion ? 0.2 : 0.6, ease: [0.16, 1, 0.3, 1] },
+              opacity: { duration: shouldReduceMotion ? 0.2 : 0.75, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: shouldReduceMotion ? 0.2 : 1.1, ease: [0.16, 1, 0.3, 1] },
               x: { duration: 0.6, ease: "easeOut" },
               y: { duration: 0.6, ease: "easeOut" },
             },
           }}
           exit={{
             opacity: 0,
-            transition: { duration: shouldReduceMotion ? 0.2 : 0.5, ease: [0.16, 1, 0.3, 1] },
+            scale: 0.98,
+            transition: { duration: shouldReduceMotion ? 0.2 : 0.55, ease: [0.16, 1, 0.3, 1] },
           }}
           className="absolute inset-0 w-full h-full"
         >

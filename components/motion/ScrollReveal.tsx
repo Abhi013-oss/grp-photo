@@ -29,8 +29,8 @@ export function ScrollReveal({
   delay = 0,
   duration = 0.7,
   distance = 32,
-  once = true,
-  amount = 0.15,
+  once = false,
+  amount = 0.08,
 }: ScrollRevealProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -42,7 +42,15 @@ export function ScrollReveal({
     switch (variant) {
       case "fade-up":
         return {
-          hidden: { opacity: 0, y: distance, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            y: distance,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             y: 0,
@@ -56,7 +64,15 @@ export function ScrollReveal({
         };
       case "fade-down":
         return {
-          hidden: { opacity: 0, y: -distance, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            y: -distance,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             y: 0,
@@ -70,7 +86,15 @@ export function ScrollReveal({
         };
       case "scale-up":
         return {
-          hidden: { opacity: 0, scale: 0.94, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            scale: 0.94,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             scale: 1,
@@ -84,7 +108,15 @@ export function ScrollReveal({
         };
       case "slide-left":
         return {
-          hidden: { opacity: 0, x: distance, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            x: distance,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             x: 0,
@@ -98,7 +130,15 @@ export function ScrollReveal({
         };
       case "slide-right":
         return {
-          hidden: { opacity: 0, x: -distance, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            x: -distance,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             x: 0,
@@ -113,7 +153,14 @@ export function ScrollReveal({
       case "fade-in":
       default:
         return {
-          hidden: { opacity: 0, filter: "blur(4px)" },
+          hidden: {
+            opacity: 0,
+            filter: "blur(6px)",
+            transition: {
+              duration: 0.35,
+              ease: [0.25, 1, 0.5, 1],
+            },
+          },
           visible: {
             opacity: 1,
             filter: "blur(0px)",
@@ -131,7 +178,7 @@ export function ScrollReveal({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount, margin: "-40px" }}
+      viewport={{ once, amount, margin: "-30px 0px -30px 0px" }}
       variants={getVariants()}
       className={className}
     >
@@ -151,7 +198,7 @@ export function ScrollRevealStagger({
   children,
   className = "",
   staggerDelay = 0.12,
-  once = true,
+  once = false,
 }: ScrollRevealStaggerProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -160,7 +207,12 @@ export function ScrollRevealStagger({
   }
 
   const containerVariants: Variants = {
-    hidden: {},
+    hidden: {
+      transition: {
+        staggerChildren: 0.04,
+        staggerDirection: -1,
+      },
+    },
     visible: {
       transition: {
         staggerChildren: staggerDelay,
@@ -173,7 +225,7 @@ export function ScrollRevealStagger({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount: 0.1, margin: "-30px" }}
+      viewport={{ once, amount: 0.08, margin: "-30px 0px -30px 0px" }}
       variants={containerVariants}
       className={className}
     >
@@ -204,10 +256,10 @@ export function ScrollRevealItem({
   const itemVariants: Variants = {
     hidden:
       variant === "scale-up"
-        ? { opacity: 0, scale: 0.95, filter: "blur(4px)" }
+        ? { opacity: 0, scale: 0.94, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } }
         : variant === "fade-up"
-        ? { opacity: 0, y: distance, filter: "blur(4px)" }
-        : { opacity: 0, filter: "blur(4px)" },
+        ? { opacity: 0, y: distance, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } }
+        : { opacity: 0, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } },
     visible: {
       opacity: 1,
       y: 0,

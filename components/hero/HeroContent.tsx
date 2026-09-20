@@ -31,9 +31,9 @@ export function HeroContent({ slide }: HeroContentProps) {
       {/* Eyebrow & Provenance */}
       <motion.div
         key={`eyebrow-${slide.id}`}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, y: 14, filter: "blur(4px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
         className="flex items-center justify-center gap-2 mb-3.5 sm:mb-4.5 mx-auto"
       >
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF8F5]/85 backdrop-blur-md border border-[#2C2523]/10 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-espresso-primary">
@@ -48,9 +48,9 @@ export function HeroContent({ slide }: HeroContentProps) {
       {/* Main Editorial Headline */}
       <motion.h1
         key={`title-${slide.id}`}
-        initial={{ opacity: 0, y: 14 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, y: 22, scale: 0.98, filter: "blur(6px)" }}
+        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.65, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
         className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.08] font-normal tracking-tight text-espresso-primary mb-3.5 sm:mb-5 drop-shadow-sm text-center mx-auto"
       >
         {slide.title}
@@ -59,9 +59,9 @@ export function HeroContent({ slide }: HeroContentProps) {
       {/* Subtitle / Narrative Copy */}
       <motion.p
         key={`sub-${slide.id}`}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
         className="font-sans text-xs sm:text-sm md:text-base text-espresso-muted max-w-xl mx-auto leading-relaxed mb-6 sm:mb-8 font-normal text-center"
       >
         {slide.subtitle}
@@ -70,9 +70,9 @@ export function HeroContent({ slide }: HeroContentProps) {
       {/* Action Buttons */}
       <motion.div
         key={`cta-${slide.id}`}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+        initial={{ opacity: 0, y: 14, scale: 0.96, filter: "blur(4px)" }}
+        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.6, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
         className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 mx-auto"
       >
         {/* Primary CTA: WhatsApp */}
