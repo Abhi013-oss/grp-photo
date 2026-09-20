@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Compass, Sun, ArrowRight } from "lucide-react";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 interface DestinationRegion {
   id: string;
@@ -163,40 +164,44 @@ export function DestinationsShowcase() {
     >
       <div className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#2C2523]/10 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-espresso-muted mb-4">
-            <Compass className="w-3.5 h-3.5 text-gold-subtle" />
-            <span>INDIAN HORIZONS & SACRED LANDSCAPES</span>
+        <ScrollReveal variant="fade-up" duration={0.8}>
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[#FAF8F5] border border-[#2C2523]/10 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-espresso-muted mb-4">
+              <Compass className="w-3.5 h-3.5 text-gold-subtle" />
+              <span>INDIAN HORIZONS & SACRED LANDSCAPES</span>
+            </div>
+
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-espresso-primary mb-4">
+              Where Ancient Heritage Meets Sacred Unions
+            </h2>
+
+            <p className="font-sans text-sm sm:text-base text-espresso-muted leading-relaxed font-normal max-w-2xl mx-auto">
+              From regal palace courtyards to tranquil backwaters and eternal river ghats, we document celebrations across the subcontinent&apos;s most revered landscapes.
+            </p>
           </div>
-
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-espresso-primary mb-4">
-            Where Ancient Heritage Meets Sacred Unions
-          </h2>
-
-          <p className="font-sans text-sm sm:text-base text-espresso-muted leading-relaxed font-normal max-w-2xl mx-auto">
-            From regal palace courtyards to tranquil backwaters and eternal river ghats, we document celebrations across the subcontinent&apos;s most revered landscapes.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Region Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
-          {destinationsData.map((dest) => {
-            const isActive = activeTab === dest.id;
-            return (
-              <button
-                key={dest.id}
-                onClick={() => setActiveTab(dest.id)}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 border ${
-                  isActive
-                    ? "bg-espresso-primary text-[#FAF8F5] border-espresso-primary shadow-editorial"
-                    : "bg-[#FAF8F5]/80 text-espresso-muted border-[#2C2523]/10 hover:border-[#2C2523]/30 hover:text-espresso-primary"
-                }`}
-              >
-                {dest.name}
-              </button>
-            );
-          })}
-        </div>
+        <ScrollReveal variant="fade-up" delay={0.1}>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
+            {destinationsData.map((dest) => {
+              const isActive = activeTab === dest.id;
+              return (
+                <button
+                  key={dest.id}
+                  onClick={() => setActiveTab(dest.id)}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 border ${
+                    isActive
+                      ? "bg-espresso-primary text-[#FAF8F5] border-espresso-primary shadow-editorial"
+                      : "bg-[#FAF8F5]/80 text-espresso-muted border-[#2C2523]/10 hover:border-[#2C2523]/30 hover:text-espresso-primary"
+                  }`}
+                >
+                  {dest.name}
+                </button>
+              );
+            })}
+          </div>
+        </ScrollReveal>
 
         {/* Active Destination Showcase Panel */}
         <AnimatePresence mode="wait">

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ImageAsset } from "@/lib/types";
 import { PortfolioLightbox } from "./PortfolioLightbox";
 import { Maximize2 } from "lucide-react";
+import { ScrollReveal } from "@/components/motion/ScrollReveal";
 
 interface StoryGalleryProps {
   images: ImageAsset[];
@@ -46,37 +47,40 @@ export function StoryGallery({ images }: StoryGalleryProps) {
           }
 
           return (
-            <div
-              key={index}
-              onClick={() => setActiveLightboxIndex(index)}
-              className={`${colSpan} group cursor-pointer relative overflow-hidden rounded-[2px] bg-surface-ivory shadow-subtle hover:shadow-editorial transition-all duration-500`}
-            >
-              <div className={`relative w-full ${aspectClass} overflow-hidden`}>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 75vw, 1200px"
-                  quality={90}
-                  className="object-cover transition-transform duration-700 ease-luxury group-hover:scale-[1.03]"
-                />
+            <div key={index} className={colSpan}>
+              <ScrollReveal variant="fade-up" duration={0.75} delay={pattern * 0.05}>
+                <div
+                  onClick={() => setActiveLightboxIndex(index)}
+                  className="group cursor-pointer relative overflow-hidden rounded-[2px] bg-surface-ivory shadow-subtle hover:shadow-editorial transition-all duration-500 w-full"
+                >
+                  <div className={`relative w-full ${aspectClass} overflow-hidden`}>
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 75vw, 1200px"
+                      quality={90}
+                      className="object-cover transition-transform duration-700 ease-luxury group-hover:scale-[1.03]"
+                    />
 
-                {/* Hover Overlay with subtle icon */}
-                <div className="absolute inset-0 bg-[#2C2523]/0 group-hover:bg-[#2C2523]/25 transition-colors duration-500 flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 rounded-full bg-[#FAF8F5]/90 backdrop-blur-md text-espresso-primary shadow-sm">
-                    <Maximize2 className="w-4 h-4" />
+                    {/* Hover Overlay with subtle icon */}
+                    <div className="absolute inset-0 bg-[#2C2523]/0 group-hover:bg-[#2C2523]/25 transition-colors duration-500 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-3 rounded-full bg-[#FAF8F5]/90 backdrop-blur-md text-espresso-primary shadow-sm">
+                        <Maximize2 className="w-4 h-4" />
+                      </div>
+                    </div>
+
+                    {/* Caption Pill if available */}
+                    {image.caption && (
+                      <div className="absolute bottom-4 left-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span className="inline-block px-3 py-1.5 rounded-sm bg-[#FAF8F5]/92 backdrop-blur-md text-espresso-primary text-xs font-serif font-light">
+                          {image.caption}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
-
-                {/* Caption Pill if available */}
-                {image.caption && (
-                  <div className="absolute bottom-4 left-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="inline-block px-3 py-1.5 rounded-sm bg-[#FAF8F5]/92 backdrop-blur-md text-espresso-primary text-xs font-serif font-light">
-                      {image.caption}
-                    </span>
-                  </div>
-                )}
-              </div>
+              </ScrollReveal>
             </div>
           );
         })}
