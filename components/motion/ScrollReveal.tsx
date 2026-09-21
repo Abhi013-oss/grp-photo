@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, useReducedMotion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export type AnimationVariant =
   | "fade-up"
@@ -27,17 +27,11 @@ export function ScrollReveal({
   className = "",
   variant = "fade-up",
   delay = 0,
-  duration = 0.7,
-  distance = 32,
+  duration = 0.75,
+  distance = 45,
   once = false,
-  amount = 0.08,
+  amount = 0.05,
 }: ScrollRevealProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   const getVariants = (): Variants => {
     switch (variant) {
       case "fade-up":
@@ -45,7 +39,7 @@ export function ScrollReveal({
           hidden: {
             opacity: 0,
             y: distance,
-            filter: "blur(6px)",
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -67,7 +61,7 @@ export function ScrollReveal({
           hidden: {
             opacity: 0,
             y: -distance,
-            filter: "blur(6px)",
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -88,8 +82,8 @@ export function ScrollReveal({
         return {
           hidden: {
             opacity: 0,
-            scale: 0.94,
-            filter: "blur(6px)",
+            scale: 0.92,
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -111,7 +105,7 @@ export function ScrollReveal({
           hidden: {
             opacity: 0,
             x: distance,
-            filter: "blur(6px)",
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -133,7 +127,7 @@ export function ScrollReveal({
           hidden: {
             opacity: 0,
             x: -distance,
-            filter: "blur(6px)",
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -155,7 +149,7 @@ export function ScrollReveal({
         return {
           hidden: {
             opacity: 0,
-            filter: "blur(6px)",
+            filter: "blur(8px)",
             transition: {
               duration: 0.35,
               ease: [0.25, 1, 0.5, 1],
@@ -178,7 +172,7 @@ export function ScrollReveal({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount, margin: "-30px 0px -30px 0px" }}
+      viewport={{ once, amount, margin: "-20px 0px -20px 0px" }}
       variants={getVariants()}
       className={className}
     >
@@ -200,23 +194,17 @@ export function ScrollRevealStagger({
   staggerDelay = 0.12,
   once = false,
 }: ScrollRevealStaggerProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   const containerVariants: Variants = {
     hidden: {
       transition: {
-        staggerChildren: 0.04,
+        staggerChildren: 0.05,
         staggerDirection: -1,
       },
     },
     visible: {
       transition: {
         staggerChildren: staggerDelay,
-        delayChildren: 0.05,
+        delayChildren: 0.04,
       },
     },
   };
@@ -225,7 +213,7 @@ export function ScrollRevealStagger({
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount: 0.08, margin: "-30px 0px -30px 0px" }}
+      viewport={{ once, amount: 0.05, margin: "-20px 0px -20px 0px" }}
       variants={containerVariants}
       className={className}
     >
@@ -238,8 +226,8 @@ export function ScrollRevealItem({
   children,
   className = "",
   variant = "fade-up",
-  distance = 28,
-  duration = 0.65,
+  distance = 36,
+  duration = 0.7,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -247,19 +235,13 @@ export function ScrollRevealItem({
   distance?: number;
   duration?: number;
 }) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
-
   const itemVariants: Variants = {
     hidden:
       variant === "scale-up"
-        ? { opacity: 0, scale: 0.94, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } }
+        ? { opacity: 0, scale: 0.92, filter: "blur(8px)", transition: { duration: 0.35, ease: "easeOut" } }
         : variant === "fade-up"
-        ? { opacity: 0, y: distance, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } }
-        : { opacity: 0, filter: "blur(6px)", transition: { duration: 0.35, ease: "easeOut" } },
+        ? { opacity: 0, y: distance, filter: "blur(8px)", transition: { duration: 0.35, ease: "easeOut" } }
+        : { opacity: 0, filter: "blur(8px)", transition: { duration: 0.35, ease: "easeOut" } },
     visible: {
       opacity: 1,
       y: 0,

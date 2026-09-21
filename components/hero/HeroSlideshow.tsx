@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { HeroSlide } from "@/lib/types";
 import { HERO_SLIDE_DURATION } from "@/data/hero";
 
@@ -19,7 +19,6 @@ export function HeroSlideshow({
   onIndexChange,
   isPaused = false,
 }: HeroSlideshowProps) {
-  const shouldReduceMotion = useReducedMotion();
   const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -40,7 +39,7 @@ export function HeroSlideshow({
 
   // Handle subtle desktop pointer micro-tilt (max 6px)
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (shouldReduceMotion || window.innerWidth < 1024) return;
+    if (window.innerWidth < 1024) return;
     const rect = containerRef.current?.getBoundingClientRect();
     if (!rect) return;
     const x = ((e.clientX - rect.left) / rect.width - 0.5) * 8; // -4px to +4px
@@ -73,8 +72,8 @@ export function HeroSlideshow({
             x: mouseOffset.x,
             y: mouseOffset.y,
             transition: {
-              opacity: { duration: shouldReduceMotion ? 0.2 : 0.75, ease: [0.16, 1, 0.3, 1] },
-              scale: { duration: shouldReduceMotion ? 0.2 : 1.1, ease: [0.16, 1, 0.3, 1] },
+              opacity: { duration: 0.75, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: 1.1, ease: [0.16, 1, 0.3, 1] },
               x: { duration: 0.6, ease: "easeOut" },
               y: { duration: 0.6, ease: "easeOut" },
             },
@@ -82,14 +81,14 @@ export function HeroSlideshow({
           exit={{
             opacity: 0,
             scale: 0.98,
-            transition: { duration: shouldReduceMotion ? 0.2 : 0.55, ease: [0.16, 1, 0.3, 1] },
+            transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
           }}
           className="absolute inset-0 w-full h-full"
         >
           {/* Image with subtle Ken Burns drift */}
           <motion.div
-            initial={shouldReduceMotion ? { scale: 1 } : { scale: 1.0 }}
-            animate={shouldReduceMotion ? { scale: 1 } : { scale: 1.03 }}
+            initial={{ scale: 1.0 }}
+            animate={{ scale: 1.03 }}
             transition={{
               duration: HERO_SLIDE_DURATION / 1000 + 0.3,
               ease: "linear",

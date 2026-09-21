@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Transition, Variants } from "framer-motion";
 
 export const motionTokens = {
@@ -68,26 +67,5 @@ export const staggerContainerVariants: Variants = {
  * Hook to dynamically react to the user's reduced motion preference.
  */
 export function usePrefersReducedMotion(): boolean {
-  const [prefersReduced, setPrefersReduced] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined" || !window.matchMedia) return;
-
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReduced(mediaQuery.matches);
-
-    const listener = (event: MediaQueryListEvent) => {
-      setPrefersReduced(event.matches);
-    };
-
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener("change", listener);
-      return () => mediaQuery.removeEventListener("change", listener);
-    } else {
-      mediaQuery.addListener(listener);
-      return () => mediaQuery.removeListener(listener);
-    }
-  }, []);
-
-  return prefersReduced;
+  return false;
 }
