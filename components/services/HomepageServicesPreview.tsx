@@ -19,7 +19,7 @@ export function HomepageServicesPreview() {
             </div>
 
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.4rem] font-normal tracking-tight text-espresso-primary leading-[1.15] text-center">
-              Structured around presence, legacy and emotion.
+              PHOTOGRAPHY THAT FEELS LIKE YOU
             </h2>
 
             <Link

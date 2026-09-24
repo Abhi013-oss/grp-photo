@@ -19,7 +19,7 @@ export function PortfolioArchiveView({
 }: PortfolioArchiveViewProps) {
   const [activeCategory, setActiveCategory] = useState<CelebrationCategory>("All");
 
-  // Find the prominent featured story (Ananya & Arjun)
+  // Find the prominent featured story
   const featuredStory = initialStories.find((s) => s.featured) || initialStories[0];
 
   // Filter stories based on selected category
@@ -50,8 +50,8 @@ export function PortfolioArchiveView({
 
       {/* WhatsApp Conversion Section */}
       <PortfolioCTA
-        eyebrow="RESERVE YOUR DATES"
-        heading="Let's capture the story you'll cherish forever."
+        eyebrow="GET IN TOUCH"
+        heading="LET'S CAPTURE YOUR STORY"
       />
     </div>
   );

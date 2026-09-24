@@ -44,7 +44,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   }, [isOpen]);
 
   const whatsappUrl = createWhatsAppLink({
-    customMessage: "Hi, I am exploring your photography website on mobile and would love to enquire about availability.",
+    customMessage: "Hello Guri Rupal Photography, I would like to enquire about your photography services.",
   });
 
   if (!mounted) return null;
@@ -106,9 +106,9 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           {/* Bottom Conversion Area */}
           <div className="flex flex-col items-center text-center gap-4 border-t border-[#2C2523]/10 pt-6 flex-shrink-0">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 text-xs text-espresso-muted uppercase tracking-[0.15em] text-center">
-              <span>Based in India</span>
+              <span>Based in Chandigarh</span>
               <span className="hidden sm:inline">·</span>
-              <span>Jaipur · Udaipur · Worldwide</span>
+              <span>Available for Travel & Celebrations</span>
             </div>
 
             <a

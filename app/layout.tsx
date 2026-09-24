@@ -21,7 +21,7 @@ const jakarta = Plus_Jakarta_Sans({
   preload: false,
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://varastories.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || siteConfig.url || "https://photography2-indol.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Luxury Indian Wedding Photography",
-    "Editorial Wedding Photographer",
-    "Udaipur Palace Wedding",
-    "Jaipur Wedding Photography",
-    "Destination Wedding India",
-    "Contemporary Indian Bridal Photography",
-    "Arjun Mehra Photography",
+    "Guri Rupal Photography",
+    "Guri Rupal",
+    "Wedding Photography",
+    "Pre-Wedding Photography",
+    "Event Photography",
+    "Wedding Films",
+    "Photography",
   ],
   authors: [{ name: photographerData.name, url: siteUrl }],
   creator: photographerData.name,
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
         url: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2400&q=90",
         width: 2400,
         height: 1600,
-        alt: `${siteConfig.name} — Luxury Indian Wedding Photography`,
+        alt: `${siteConfig.name} — Professional Photography`,
       },
     ],
   },
@@ -106,13 +106,26 @@ export default function RootLayout({
         "@id": `${siteUrl}/#service`,
         name: siteConfig.name,
         url: siteUrl,
+        telephone: siteConfig.phone,
+        email: siteConfig.email,
         description: siteConfig.description,
-        areaServed: siteConfig.locations,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "3270, Sector 27D",
+          addressLocality: "Chandigarh",
+          postalCode: "160019",
+          addressCountry: "IN",
+        },
         founder: {
           "@type": "Person",
           name: photographerData.name,
           jobTitle: photographerData.role,
         },
+        sameAs: [
+          siteConfig.socialLinks?.instagram,
+          siteConfig.socialLinks?.facebook,
+          siteConfig.socialLinks?.youtube,
+        ].filter(Boolean),
       },
     ],
   };

@@ -15,18 +15,18 @@ import { siteConfig } from "@/data/site";
 import { photographerData } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: `About ${photographerData.name} — Storyteller & Philosophy`,
+  title: `About ${photographerData.name} — Photographer & Founder`,
   description:
-    "Learn about Arjun Mehra, founder and lead photographer of VARA STORIES. Discover our documentary philosophy, unobtrusive approach, and cultural reverence for Indian celebrations.",
+    "Learn about Guri Rupal, Photographer & Founder of Guri Rupal Photography. Discover our philosophy, natural approach, and commitment to capturing genuine moments.",
   openGraph: {
     title: `About ${photographerData.name} | ${siteConfig.name}`,
     description:
-      "A quiet, editorial approach to documenting Indian celebrations, ancestral rituals, and generational bonds across India and destinations worldwide.",
+      "Photography is about preserving emotions, connections and meaningful moments naturally.",
     images: [
       {
         url: photographerData.portrait.src.startsWith("http")
           ? photographerData.portrait.src
-          : `${siteConfig.url || "https://varastories.com"}${photographerData.portrait.src}`,
+          : `${siteConfig.url || "https://photography2-indol.vercel.app"}${photographerData.portrait.src}`,
         width: 1600,
         height: 2000,
         alt: photographerData.portrait.alt,
@@ -66,7 +66,7 @@ export default function AboutPage() {
         {/* Field Notes & Travel Journal Across India */}
         <TravelJournal />
 
-        {/* Selected Stories Close to Arjun's Heart */}
+        {/* Selected Stories Close to Guri's Heart */}
         <SelectedWork />
 
         {/* Warm, Sincere WhatsApp Inquiry Callout */}

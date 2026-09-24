@@ -5,106 +5,110 @@ export const servicesData: ServiceOffering[] = [
     id: "service-weddings",
     slug: "wedding-photography",
     number: "01",
-    title: "The Wedding Archive",
+    title: "WEDDING PHOTOGRAPHY",
     shortDescription:
-      "Complete multi-day wedding storytelling covering the emotions, sacred rituals, family bonds, and atmosphere of your celebration.",
+      "From intimate rituals to grand celebrations, meaningful moments are documented with a natural and timeless approach.",
     description:
-      "Your wedding isn't a single choreographed moment; it is hundreds of fleeting, unrepeatable glances unfolding around the people you love most. We approach your multi-day Indian wedding with a documentary spirit and high-fashion grace, capturing everything from quiet morning prayers to the electric euphoria of the midnight Baraat.",
+      "From intimate rituals to grand celebrations, meaningful moments are documented with a natural and timeless approach. We focus on genuine connections, sacred traditions, and unscripted emotions throughout your celebration day.",
     image: {
       src: "/images/photo-1583939003579-730e3918a45a.jpg",
-      alt: "Couple standing in royal wedding attire inside palace courtyard",
+      alt: "Wedding celebration couple in traditional attire",
       width: 1800,
       height: 1200,
       objectPosition: "center 28%",
     },
     category: "Weddings",
     features: [
-      "Multi-day celebration coverage (Haldi, Mehndi, Sangeet, Pheras, Reception)",
-      "Unobtrusive documentary team preserving natural family interactions",
-      "Signature fine-art editorial portrait sessions during golden hour",
-      "Archival color-grading respecting authentic Indian skin tones and silk textures",
-      "Handcrafted private digital gallery & museum-grade heirloom album curation",
+      "Comprehensive wedding day documentation",
+      "Unobtrusive approach preserving genuine family moments",
+      "Natural couple portraiture with gentle guidance",
+      "Timeless, natural color grading and professional post-processing",
+      "High-resolution digital collection curated for your keepsakes",
     ],
-    relatedStorySlugs: ["ananya-arjun-udaipur", "meera-kabir-jaipur"],
-    inquiryPrompt: "Hi, I am interested in discussing coverage for our upcoming wedding celebration.",
+    relatedStorySlugs: ["weddings"],
+    inquiryPrompt:
+      "Hello Guri Rupal Photography, I would like to enquire about your wedding photography services.",
   },
   {
     id: "service-pre-weddings",
-    slug: "pre-wedding-stories",
+    slug: "pre-wedding-photography",
     number: "02",
-    title: "Pre-Wedding Narratives",
+    title: "PRE-WEDDING PHOTOGRAPHY",
     shortDescription:
-      "Editorial couple sessions designed around your dynamic, architectural heritage, and natural golden-hour interaction.",
+      "Couple portraits and stories captured in a relaxed, expressive and visually beautiful way.",
     description:
-      "Before the whirlwind of your wedding days begins, the pre-wedding session is a relaxed creative interlude. Rather than stiff, artificial poses, we design a visual narrative that mirrors who you are—exploring historic havelis, sweeping sand dunes, or private estates with natural cinematic movement.",
+      "Couple portraits and stories captured in a relaxed, expressive and visually beautiful way. Designed around your personal dynamic, natural daylight, and meaningful locations.",
     image: {
       src: "/images/photo-1545232979-8bf68ee9b1af.jpg",
-      alt: "Pre-wedding couple embracing during warm sunset golden hour",
+      alt: "Couple during warm golden hour pre-wedding photography session",
       width: 1800,
       height: 1200,
       objectPosition: "center 30%",
     },
     category: "Pre-Weddings",
     features: [
-      "Dedicated creative consultation and location scouting",
-      "Architectural and daylight-led composition tailored to couple styling",
+      "Creative consultation and session planning",
       "Relaxed, movement-focused directing for natural spontaneity",
-      "Curated editorial stills designed for celebration invitations and keepsakes",
+      "Carefully chosen daylight locations and scenic settings",
+      "Curated high-resolution imagery designed for invitations and albums",
     ],
-    relatedStorySlugs: ["tara-aman-jodhpur"],
-    inquiryPrompt: "Hi, I would love to enquire about scheduling an editorial pre-wedding story session.",
+    relatedStorySlugs: ["pre-weddings"],
+    inquiryPrompt:
+      "Hello Guri Rupal Photography, I would like to enquire about pre-wedding photography sessions.",
   },
   {
-    id: "service-destination",
-    slug: "destination-celebrations",
+    id: "service-cinematic-films",
+    slug: "cinematic-wedding-films",
     number: "03",
-    title: "Destination Weddings",
+    title: "CINEMATIC WEDDING FILMS",
     shortDescription:
-      "Bespoke photography for multi-day weddings across Rajasthan palaces, coastal retreats, and international sanctuaries.",
+      "Emotional visual storytelling that preserves the atmosphere, people and moments of your celebration.",
     description:
-      "A destination wedding gathers your closest world in one extraordinary setting. We travel alongside you with complete technical readiness, capturing the spirit of the destination—the reflections of Lake Pichola, the sea breeze of coastal Goa, or the monumental stone of Jodhpur—as an organic character in your story.",
+      "Emotional visual storytelling that preserves the atmosphere, people and moments of your celebration. Crafted with cinematic depth, natural soundscapes, and timeless pacing.",
     image: {
       src: "/images/pro-destination-lake-palace-udaipur.jpg",
-      alt: "Taj Lake Palace Udaipur floating over Lake Pichola for luxury destination celebrations",
+      alt: "Celebration setting for cinematic wedding film documentation",
       width: 1800,
       height: 1200,
       objectPosition: "center 40%",
     },
-    category: "Destination",
+    category: "Weddings",
     features: [
-      "Travel-ready documentation team familiar with palace & coastal lighting",
-      "Welcome dinner and sundowner cocktail coverage",
-      "Scenic landscape integrations celebrating local architectural character",
-      "Multi-timezone digital coordination and delivery for diaspora couples",
+      "Cinematic highlight films and celebration features",
+      "Careful capture of ambient vows, speeches, and music",
+      "Artful cinematic composition and professional color grading",
+      "Seamless integration alongside the photography team",
     ],
-    relatedStorySlugs: ["simran-rohan-goa", "dia-aryaman-mumbai"],
-    inquiryPrompt: "Hi, I am planning a destination wedding and would love to check availability for our dates.",
+    relatedStorySlugs: ["weddings"],
+    inquiryPrompt:
+      "Hello Guri Rupal Photography, I would like to enquire about cinematic wedding films.",
   },
   {
-    id: "service-portraits",
-    slug: "fine-art-portraits",
+    id: "service-event-celebration",
+    slug: "event-celebration-photography",
     number: "04",
-    title: "Fine Art & Heirlooms",
+    title: "EVENT & CELEBRATION PHOTOGRAPHY",
     shortDescription:
-      "Daylight-inspired bridal monographs, generational family studies, and cultural ritual details preserved for posterity.",
+      "Professional photography for engagements, birthdays, family celebrations and other meaningful occasions.",
     description:
-      "Beyond grand celebrations, there is deep reverence in solitary studies and multi-generational heritage. We document bridal shringars, handwoven zardozi textiles, ancestral jewelry, and the quiet dignity of elders with fine-art stillness and natural light.",
+      "Professional photography for engagements, birthdays, family celebrations and other meaningful occasions. Documenting the joy and togetherness of the milestones that matter most.",
     image: {
-      src: "/images/pro-bride-portrait-jewelry.jpg",
-      alt: "Fine art bridal portrait showcasing heirloom polki necklace, matha patti, and nath",
+      src: "/images/pro-celebration-sangeet-energy.jpg",
+      alt: "Event and celebration photography capturing joyful moments",
       width: 1800,
       height: 1200,
-      objectPosition: "center 22%",
+      objectPosition: "center center",
     },
-    category: "Portraits",
+    category: "Celebrations",
     features: [
-      "Daylight studio or on-location private portraiture",
-      "Detailed capture of heirloom textiles, Banarasi weaves, and polki jewels",
-      "Multi-generational family portraits composed with classical poise",
-      "Fine-art printing on museum-grade Hahnemühle rag paper",
+      "Photography coverage for engagements, anniversaries, and family milestones",
+      "Candid documentation of guests, family interactions, and decor",
+      "High-resolution digital delivery with complete retouching",
+      "Professional and reliable service for occasions of every scale",
     ],
-    relatedStorySlugs: ["kavya-editorial-chandigarh", "avani-dev-jaipur"],
-    inquiryPrompt: "Hi, I would love to enquire about a private bridal or family portraiture session.",
+    relatedStorySlugs: ["engagements", "celebrations"],
+    inquiryPrompt:
+      "Hello Guri Rupal Photography, I would like to enquire about event and celebration photography.",
   },
 ];
 
@@ -113,40 +117,40 @@ export const experiencePillars: ExperiencePillar[] = [
     keyword: "OBSERVE",
     title: "Notice the Quiet and Unscripted",
     description:
-      "We watch for the real moments happening naturally—the shared glance between sisters during the varmala, the proud silence of a father, and the spontaneous laughter when rituals turn playful.",
+      "We watch for real moments happening naturally—a shared glance between loved ones, spontaneous laughter, and the quiet dignity of family traditions.",
     image: {
       src: "/images/photo-1606800052052-a08af7148866.jpg",
-      alt: "Hands joined in sacred Vedic prayer during quiet wedding ritual",
+      alt: "Hands joined during celebration prayer and ritual",
     },
   },
   {
     keyword: "CONNECT",
     title: "Comfort Over Performance",
     description:
-      "We believe that when people feel safe, unhurried, and respected, their truest grace emerges effortlessly without barking commands or rigid choreography.",
+      "We believe that when people feel relaxed and unhurried, their genuine grace emerges effortlessly without rigid posing or awkward choreography.",
     image: {
       src: "/images/pro-couple-royal-wedding-portrait.jpg",
-      alt: "Regal Indian bride and groom sharing a serene intimate moment",
+      alt: "Couple sharing a serene, unscripted moment",
     },
   },
   {
     keyword: "COMPOSE",
-    title: "Light and Heritage in Harmony",
+    title: "Light and Atmosphere in Harmony",
     description:
-      "We use natural sandstone geometry, the soft peach radiance of morning light, and the amber glow of candlelit mandaps to elevate documentary realism into timeless art.",
+      "We use natural daylight, architectural symmetry, and ambient warmth to create photographs that feel authentic, balanced, and timeless.",
     image: {
       src: "/images/pro-destination-lake-palace-udaipur.jpg",
-      alt: "Taj Lake Palace Udaipur reflecting across golden hour water",
+      alt: "Lakeside architectural setting in soft golden daylight",
     },
   },
   {
     keyword: "PRESERVE",
     title: "Art That Outlives the Celebration",
     description:
-      "Every frame is timed to an organic, filmic palette. Twenty years from now, your photographs will evoke the authentic warmth and scent of your day, untainted by fleeting digital filter trends.",
+      "Every frame is edited to a natural, timeless palette that you can return to for years to come without feeling tied to fleeting trends.",
     image: {
       src: "/images/pro-bride-regal-maroon-sabyasachi.jpg",
-      alt: "Timeless royal bridal couture preserving generational heritage",
+      alt: "Timeless bridal portrait preserving delicate details",
     },
   },
 ];
@@ -154,42 +158,42 @@ export const experiencePillars: ExperiencePillar[] = [
 export const processSteps: ProcessStep[] = [
   {
     stepNumber: "01",
-    title: "THE DISCOVERY DIALOGUE",
+    title: "CONNECT",
     description:
-      "Share your anticipated dates, chosen venue, and the emotional spirit of your celebration. We discuss your vision, personal aesthetics, and family rituals.",
+      "Understand your vision, event and the moments that matter most to you.",
     image: {
       src: "/images/pro-destination-jaipur-courtyard.jpg",
-      alt: "Intimate consultation walk through sunlit heritage courtyard in Jaipur",
+      alt: "Initial consultation and discussion in natural daylight",
     },
   },
   {
     stepNumber: "02",
-    title: "STORY MAPPING",
+    title: "PLAN",
     description:
-      "Prior to the event, we review the lighting angles, sacred ceremony timelines, and family dynamics to ensure comprehensive and discreet coverage.",
+      "Discuss the photography approach, schedule and important details before the event.",
     image: {
       src: "/images/pro-destination-amber-corridors.jpg",
-      alt: "Arched sandstone corridors and natural daylight architecture of Amber Fort",
+      alt: "Planning the photography approach and celebration timeline",
     },
   },
   {
     stepNumber: "03",
-    title: "DOCUMENTARY CAPTURE",
+    title: "CAPTURE",
     description:
-      "During the celebrations, our team operates with quiet reverence. We guide gently during portraits and observe unobtrusively during sacred rituals.",
+      "Document the emotions, people and moments naturally throughout the celebration.",
     image: {
       src: "/images/pro-ceremony-pheras-mandap.jpg",
-      alt: "Sacred agni rituals and unobtrusive documentary capture of wedding pheras",
+      alt: "Documenting authentic moments and rituals throughout the celebration",
     },
   },
   {
     stepNumber: "04",
-    title: "THE HANDCRAFTED HEIRLOOM",
+    title: "DELIVER",
     description:
-      "Every image is individually color-timed and presented in a private master digital gallery, followed by the curation of your bespoke archival heirloom album.",
+      "Turn those moments into photographs you can revisit and treasure.",
     image: {
       src: "/images/pro-bride-yellow-maroon-lehenga.jpg",
-      alt: "Heirloom handcrafted Banarasi zardozi bridal lehenga and antique polki",
+      alt: "Delivering timeless photographs to revisit and treasure",
     },
   },
 ];

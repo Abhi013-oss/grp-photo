@@ -13,13 +13,13 @@ export const eventTypes: EventType[] = [
 
 export const contactData: ContactPageData = {
   intro: {
-    eyebrow: "LET'S TALK",
-    heading: "Tell us about your day.",
+    eyebrow: "GET IN TOUCH",
+    heading: "LET'S CAPTURE YOUR STORY",
     description:
-      "Your date, your people, your plans — start with whatever you already know. We document celebrations with presence, cultural reverence, and quiet editorial grace.",
+      "Planning a wedding, pre-wedding shoot or special celebration? Get in touch with Guri Rupal Photography to discuss your photography requirements.",
     image: {
       src: "/images/photo-1583939003579-730e3918a45a.jpg",
-      alt: "Couple in traditional bridal attire against heritage sandstone courtyard",
+      alt: "Couple in traditional attire during photography session",
       width: 2000,
       height: 1333,
       objectPosition: "center 28%",
@@ -27,27 +27,27 @@ export const contactData: ContactPageData = {
     },
   },
   whatsappSection: {
-    eyebrow: "READY WHEN YOU ARE",
-    heading: "Prefer a conversation?",
+    eyebrow: "DIRECT CONVERSATION",
+    heading: "Prefer a direct conversation?",
     description:
-      "WhatsApp is the fastest and most personal way to connect with Arjun and our studio team. Ask questions, share tentative dates, or send moodboards directly.",
-    ctaText: "START A CONVERSATION ON WHATSAPP",
+      "Connect directly with Guri Rupal Photography on WhatsApp to discuss your event dates, locations, and photography requirements.",
+    ctaText: "CHAT ON WHATSAPP",
   },
   whatToShare: {
-    heading: "NOT SURE WHAT TO SEND?",
-    subheading: "That's completely fine. Start with whatever details you have:",
+    heading: "DETAILS TO SHARE",
+    subheading: "Feel free to share any initial details you have in mind:",
     points: [
-      "Your anticipated celebration or ceremony dates (if you have them)",
-      "Location, city, or venue you are considering",
-      "Type of celebration (multi-day royal wedding, intimate ceremony, destination)",
-      "Approximate guest count or days of coverage envisioned",
-      "What matters most to you in your photography",
+      "Your anticipated celebration or ceremony dates",
+      "City, venue or location under consideration",
+      "Type of celebration (wedding, pre-wedding, engagement, family event)",
+      "Approximate days of coverage envisioned",
+      "Any specific photography requirements or preferences",
     ],
   },
-  availabilityNote: "Share your date and we'll let you know what's possible.",
+  availabilityNote: "Available for weddings, celebrations and photography sessions.",
   closingImage: {
     src: "/images/pro-destination-lake-palace-udaipur.jpg",
-    alt: "Taj Lake Palace Udaipur glowing at sunset across Lake Pichola",
+    alt: "Celebration architectural backdrop at golden hour",
     width: 2000,
     height: 1333,
     objectPosition: "center center",

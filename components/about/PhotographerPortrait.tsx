@@ -28,7 +28,7 @@ export function PhotographerPortrait() {
         <div className="lg:col-span-6 flex flex-col items-center text-center lg:items-start lg:text-left lg:pl-4">
           <ScrollReveal variant="fade-up" duration={0.85} delay={0.12}>
             <span className="text-xs font-mono tracking-[0.25em] text-gold-subtle font-semibold uppercase mb-3">
-              FOUNDER & LEAD PHOTOGRAPHER
+              PHOTOGRAPHER & FOUNDER
             </span>
 
             <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-espresso-primary tracking-tight leading-[1.1] mb-6 text-center lg:text-left">
@@ -48,11 +48,11 @@ export function PhotographerPortrait() {
               </div>
               <div>
                 <span className="text-gold-subtle block font-semibold mb-1">BASE</span>
-                <span className="text-espresso-primary font-medium">India · Worldwide</span>
+                <span className="text-espresso-primary font-medium">Chandigarh</span>
               </div>
               <div>
                 <span className="text-gold-subtle block font-semibold mb-1">DISCIPLINE</span>
-                <span className="text-espresso-primary font-medium">Documentary & Fine Art</span>
+                <span className="text-espresso-primary font-medium">Professional Photography</span>
               </div>
             </div>
           </ScrollReveal>

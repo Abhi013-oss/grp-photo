@@ -10,7 +10,7 @@ interface ContactSuccessProps {
 
 export function ContactSuccess({ onReset, name }: ContactSuccessProps) {
   const whatsappUrl = createWhatsAppLink({
-    customMessage: `Hi Arjun, I just submitted an enquiry for ${name} on your website and wanted to say hello here as well.`,
+    customMessage: `Hello Guri Rupal Photography, I just submitted an enquiry for ${name} on your website and wanted to connect here as well.`,
   });
 
   return (

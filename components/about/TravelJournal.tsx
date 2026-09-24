@@ -11,28 +11,28 @@ interface JournalEntry {
 
 const entries: JournalEntry[] = [
   {
-    title: "Sacred Dawns on the Ghats",
-    region: "Varanasi, Uttar Pradesh",
-    image: "/images/destination-varanasi-morning-ghats.jpg",
-    note: "Awakening at 4:30 AM to witness the morning mist lifting off the sacred Ganges. There is a deep, eternal stillness here that grounds every frame in reverent humility.",
+    title: "THE ART OF CANDID WEDDING PHOTOGRAPHY",
+    region: "Quiet Observation",
+    image: "/images/photo-1583939003579-730e3918a45a.jpg",
+    note: "Documenting authentic, unchoreographed emotions as they unfold naturally throughout the celebration day.",
   },
   {
-    title: "Sandstone Reflections on Lake Pichola",
-    region: "Udaipur, Rajasthan",
+    title: "WHY THE LITTLE MOMENTS MATTER",
+    region: "Personal Connections",
+    image: "/images/photo-1606800052052-a08af7148866.jpg",
+    note: "The shared glances, spontaneous laughter, and quiet pauses often carry the deepest emotional memories of an event.",
+  },
+  {
+    title: "BEHIND THE CAMERA",
+    region: "Our Approach",
     image: "/images/pro-destination-lake-palace-udaipur.jpg",
-    note: "Light reflected off the water softens the majestic Rajput architecture, creating a natural golden diffusion that requires zero artificial manipulation.",
+    note: "Approaching every celebration with humility, presence, and an artistic commitment to natural lighting and timeless composition.",
   },
   {
-    title: "Kasavu Weaves & Palm Canals",
-    region: "Kumarakom, Kerala",
-    image: "/images/destination-kerala-backwaters.jpg",
-    note: "The rhythm of temple nadaswarams across tranquil backwaters. Photographing unions here is an exercise in unhurried grace and sensory harmony.",
-  },
-  {
-    title: "High Mountain Light & Solitude",
-    region: "Ladakh & Western Himalayas",
-    image: "/images/destination-ladakh-pangong-lake.jpg",
-    note: "At 14,000 feet, the crystal clarity of alpine light strips away all pretense, revealing the pure, raw emotional connection between two souls.",
+    title: "CREATING TIMELESS WEDDING MEMORIES",
+    region: "Enduring Imagery",
+    image: "/images/pro-bride-yellow-maroon-lehenga.jpg",
+    note: "Crafting a collection of refined photographs that you and your loved ones can return to and treasure for years to come.",
   },
 ];
 
@@ -45,15 +45,15 @@ export function TravelJournal() {
           <div className="text-center max-w-2xl mx-auto mb-14 sm:mb-20">
             <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-[#F4EFEB] border border-[#2C2523]/10 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-espresso-muted mb-4">
               <Compass className="w-3.5 h-3.5 text-gold-subtle" />
-              <span>FIELD DIARY · ACROSS THE SUBCONTINENT</span>
+              <span>VISUAL JOURNAL · PERSPECTIVES</span>
             </div>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight text-espresso-primary mb-4">
-              Field Notes from India&apos;s Revered Horizons
+              Behind the Lens & Stories We Capture
             </h2>
 
             <p className="font-sans text-sm sm:text-base text-espresso-muted leading-relaxed font-normal">
-              Every region in India has its own heartbeat, distinct daylight quality, and sacred ritual pacing. Traveling alongside families across these landscapes is my greatest privilege.
+              Thoughts on photography, genuine moments, and the art of preserving meaningful celebrations.
             </p>
           </div>
         </ScrollReveal>

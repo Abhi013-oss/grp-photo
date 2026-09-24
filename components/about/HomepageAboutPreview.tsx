@@ -45,7 +45,7 @@ export function HomepageAboutPreview() {
 
               {/* Heading */}
               <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.2rem] font-normal tracking-tight text-espresso-primary leading-[1.15] mb-6 text-center lg:text-left">
-                The person behind the photographs.
+                THE PERSON BEHIND THE CAMERA
               </h2>
 
               {/* Pull Quote */}
@@ -57,7 +57,7 @@ export function HomepageAboutPreview() {
 
               {/* Supporting Story Excerpt */}
               <p className="font-sans text-sm sm:text-base text-espresso-muted font-light leading-relaxed mb-8 max-w-xl text-center lg:text-left">
-                Photography is cultural stewardship. We honor sacred rituals with contemporary editorial restraint—allowing families to celebrate naturally without artificial posing or commercial disruption.
+                Guri Rupal Photography focuses on documenting those moments naturally and turning them into photographs you can return to for years to come.
               </p>
 
               {/* 3 Core Tenets */}

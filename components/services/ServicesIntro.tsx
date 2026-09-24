@@ -16,12 +16,12 @@ export function ServicesIntro() {
 
           {/* Large Editorial Headline */}
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] leading-[1.1] font-normal tracking-tight text-espresso-primary mb-6 text-center">
-            Photography that feels as personal as the day itself.
+            PHOTOGRAPHY THAT FEELS LIKE YOU
           </h1>
 
           {/* Supporting Narrative */}
           <p className="font-sans text-sm sm:text-base md:text-lg text-espresso-muted leading-relaxed font-light max-w-2xl mx-auto text-center">
-            We preserve real emotions, sacred rituals, and family heirlooms rather than staging artificial productions. Our services are structured around presence, artistic restraint, and the timeless dignity of Indian celebrations.
+            Capturing genuine emotions, meaningful connections and unforgettable celebrations through photography. Our services are structured around presence, natural documentation, and timeless visual memories.
           </p>
         </div>
       </ScrollReveal>

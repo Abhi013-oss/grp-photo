@@ -15,12 +15,12 @@ export type WhatsAppInquiryParams = {
 
 export function createWhatsAppLink(params?: WhatsAppInquiryParams): string {
   // Use environment variable or fallback configuration
-  const rawNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210";
+  const rawNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919815290715";
   const sanitizedNumber = rawNumber.replace(/[^0-9]/g, "");
 
   // Safe default fallback
   let message =
-    "Hi, I found your photography website and would love to enquire about photography for my upcoming event.";
+    "Hello Guri Rupal Photography, I would like to enquire about your photography services.";
 
   if (params?.customMessage) {
     message = params.customMessage;

@@ -31,6 +31,8 @@ export type CelebrationCategory =
   | "All"
   | "Weddings"
   | "Pre-Weddings"
+  | "Engagements"
+  | "Celebrations"
   | "Destination"
   | "Portraits"
   | "Rituals & Heirlooms"
@@ -132,6 +134,15 @@ export type SiteConfig = {
   locations: string[];
   navItems: NavItem[];
   url?: string;
+  phone?: string;
+  email?: string;
+  address?: string;
+  mapsUrl?: string;
+  socialLinks?: {
+    instagram?: string;
+    facebook?: string;
+    youtube?: string;
+  };
 };
 
 export type EventType =

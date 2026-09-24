@@ -17,19 +17,19 @@ export function FeaturedPortfolioSection() {
           <div className="flex items-center justify-center gap-2 mb-1">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-ivory border border-[#2C2523]/10 text-[10px] sm:text-xs font-mono uppercase tracking-[0.25em] text-espresso-primary">
               <Sparkles className="w-3 h-3 text-gold-subtle" />
-              CURATED STORIES
+              PORTFOLIO
             </span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-[3.6rem] font-normal tracking-tight text-espresso-primary leading-[1.12] text-center">
-            Celebrations framed in quiet majesty.
+            CAPTURED WITH INTENTION
           </h2>
 
           <Link
             href="/portfolio"
             className="group inline-flex items-center justify-center gap-2.5 text-xs sm:text-sm font-mono tracking-widest uppercase text-espresso-primary hover:text-espresso-muted transition-colors pb-1 border-b border-gold-subtle mt-2"
           >
-            <span>VIEW FULL ARCHIVE</span>
+            <span>VIEW PORTFOLIO</span>
             <ArrowRight className="w-4 h-4 text-gold-subtle group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
@@ -60,7 +60,7 @@ export function FeaturedPortfolioSection() {
             href="/portfolio"
             className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-surface-ivory hover:bg-[#FAF8F5] border border-[#2C2523]/20 hover:border-[#2C2523]/60 text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.1em] transition-all duration-300 shadow-subtle hover:shadow-editorial"
           >
-            <span>EXPLORE ALL {portfolioStories.length} CELEBRATION ARCHIVES</span>
+            <span>VIEW PORTFOLIO</span>
             <ArrowRight className="w-4 h-4 text-espresso-muted group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

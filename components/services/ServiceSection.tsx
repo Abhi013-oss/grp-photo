@@ -103,14 +103,14 @@ export function ServiceSection({ service, index }: ServiceSectionProps) {
                   className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-peach-soft hover:bg-peach-hover border border-peach-border text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 shadow-subtle hover:shadow-editorial active:scale-[0.98]"
                 >
                   <MessageCircle className="w-4 h-4 text-[#1E7D34] group-hover:scale-110 transition-transform" />
-                  <span>INQUIRE ON WHATSAPP</span>
+                  <span>ENQUIRE NOW</span>
                 </a>
 
                 <Link
                   href={`/portfolio?category=${service.category || "All"}`}
                   className="group inline-flex items-center gap-2 text-xs sm:text-sm font-mono tracking-wider uppercase text-espresso-primary hover:text-espresso-muted transition-colors py-2 border-b border-gold-subtle"
                 >
-                  <span>VIEW STORIES</span>
+                  <span>VIEW PORTFOLIO</span>
                   <ArrowRight className="w-3.5 h-3.5 text-gold-subtle group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>

@@ -12,16 +12,16 @@ import { contactData } from "@/data/contact";
 export const metadata: Metadata = {
   title: "Contact & Bespoke Celebration Enquiries",
   description:
-    "Start a conversation with Arjun Mehra and the VARA STORIES team. Enquire via WhatsApp or submit a celebration brief for bespoke Indian wedding photography coverage across Jaipur, Udaipur, Delhi, and worldwide.",
+    "Get in touch with Guri Rupal Photography. Connect via WhatsApp, phone, or email to enquire about wedding, pre-wedding, and celebration photography coverage.",
   openGraph: {
     title: `Contact & Enquiries | ${siteConfig.name}`,
     description:
-      "Start a direct conversation about your celebration, wedding dates, or destination photography commissions.",
+      "Start a direct conversation about your celebration, wedding dates, or destination photography commissions with Guri Rupal Photography.",
     images: [
       {
         url: contactData.intro.image.src.startsWith("http")
           ? contactData.intro.image.src
-          : `${siteConfig.url || "https://varastories.com"}${contactData.intro.image.src}`,
+          : `${siteConfig.url || "https://photography2-indol.vercel.app"}${contactData.intro.image.src}`,
         width: 2000,
         height: 1333,
         alt: contactData.intro.image.alt,

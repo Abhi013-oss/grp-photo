@@ -186,7 +186,7 @@ export function EnquiryForm() {
               label="YOUR NAME"
               type="text"
               required
-              placeholder="Ananya Sharma"
+              placeholder="Your Name"
               value={formData.name}
               onChange={(e) => handleChange("name", e.target.value)}
               error={errors.name}
@@ -197,7 +197,7 @@ export function EnquiryForm() {
               label="EMAIL ADDRESS"
               type="email"
               required
-              placeholder="ananya@example.com"
+              placeholder="Your email address"
               value={formData.email}
               onChange={(e) => handleChange("email", e.target.value)}
               error={errors.email}
@@ -210,7 +210,7 @@ export function EnquiryForm() {
               id="enquiry-phone"
               label="PHONE / WHATSAPP (OPTIONAL)"
               type="tel"
-              placeholder="+91 98765 43210"
+              placeholder="Your phone number"
               value={formData.phone || ""}
               onChange={(e) => handleChange("phone", e.target.value)}
               error={errors.phone}
@@ -252,9 +252,9 @@ export function EnquiryForm() {
 
             <FormField
               id="enquiry-location"
-              label="LOCATION / VENUE (CITY OR PALACE)"
+              label="LOCATION / VENUE (CITY OR VENUE)"
               type="text"
-              placeholder="Udaipur / Suryagarh Jaisalmer"
+              placeholder="City or Venue"
               value={formData.location || ""}
               onChange={(e) => handleChange("location", e.target.value)}
               error={errors.location}

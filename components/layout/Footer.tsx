@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { siteConfig } from "@/data/site";
 import { createWhatsAppLink } from "@/lib/whatsapp";
-import { MessageCircle, ArrowUpRight } from "lucide-react";
+import { MessageCircle, ArrowUpRight, MapPin, Phone, Mail, Instagram, Youtube, Facebook } from "lucide-react";
 
 export function Footer() {
   const whatsappUrl = createWhatsAppLink({
-    customMessage: "Hi, I am exploring your website and would love to enquire about photography for my upcoming event.",
+    customMessage: "Hello Guri Rupal Photography, I would like to enquire about your photography services.",
   });
 
   return (
@@ -13,23 +13,57 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Top Tier: Brand Statement & Contact Bridge */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-[#2C2523]/10">
-          <div className="md:col-span-6 flex flex-col items-center text-center md:items-start md:text-left">
-            <span className="font-serif text-2xl sm:text-3xl tracking-[0.2em] font-medium text-espresso-primary mb-3">
+          <div className="md:col-span-5 flex flex-col items-center text-center md:items-start md:text-left">
+            <span className="font-serif text-2xl sm:text-3xl tracking-[0.15em] font-medium text-espresso-primary mb-2">
               {siteConfig.name}
             </span>
-            <p className="font-sans text-xs sm:text-sm text-espresso-muted max-w-md mx-auto md:mx-0 leading-relaxed mb-6 font-normal">
-              Preserving the quiet emotion, sacred rituals, and royal grandeur of modern Indian celebrations across Rajasthan, Delhi, Goa, and worldwide.
+            <span className="text-[11px] font-mono tracking-widest text-gold-subtle uppercase font-semibold mb-3">
+              Guri Rupal · Photographer & Founder
+            </span>
+            <p className="font-sans text-xs sm:text-sm text-espresso-muted max-w-md mx-auto md:mx-0 leading-relaxed mb-4 font-normal">
+              {siteConfig.description}
             </p>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-[11px] font-mono tracking-widest text-espresso-muted uppercase">
-              <span>Jaipur</span>
-              <span>·</span>
-              <span>Udaipur</span>
-              <span>·</span>
-              <span>Delhi NCR</span>
-              <span>·</span>
-              <span>Goa</span>
-              <span>·</span>
-              <span>Worldwide</span>
+            {siteConfig.address && (
+              <div className="flex items-center gap-1.5 text-[11px] font-mono tracking-wide text-espresso-muted mb-4">
+                <MapPin className="w-3.5 h-3.5 text-gold-subtle shrink-0" />
+                <span>{siteConfig.address}</span>
+              </div>
+            )}
+            {/* Social Links */}
+            <div className="flex items-center gap-3 text-espresso-muted pt-1">
+              {siteConfig.socialLinks?.instagram && (
+                <a
+                  href={siteConfig.socialLinks.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="p-1.5 rounded-full hover:text-espresso-primary transition-colors hover:bg-[#FAF8F5]"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+              )}
+              {siteConfig.socialLinks?.facebook && (
+                <a
+                  href={siteConfig.socialLinks.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="p-1.5 rounded-full hover:text-espresso-primary transition-colors hover:bg-[#FAF8F5]"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+              )}
+              {siteConfig.socialLinks?.youtube && (
+                <a
+                  href={siteConfig.socialLinks.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="p-1.5 rounded-full hover:text-espresso-primary transition-colors hover:bg-[#FAF8F5]"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+              )}
             </div>
           </div>
 
@@ -41,35 +75,50 @@ export function Footer() {
               href="/portfolio"
               className="text-xs sm:text-sm text-espresso-primary hover:text-espresso-muted transition-colors tracking-wide"
             >
-              Selected Stories
+              Portfolio
             </Link>
             <Link
               href="/services"
               className="text-xs sm:text-sm text-espresso-primary hover:text-espresso-muted transition-colors tracking-wide"
             >
-              Services & Experiences
+              Services
             </Link>
             <Link
               href="/about"
               className="text-xs sm:text-sm text-espresso-primary hover:text-espresso-muted transition-colors tracking-wide"
             >
-              Studio Philosophy
+              About Guri Rupal
             </Link>
             <Link
               href="/contact"
               className="text-xs sm:text-sm text-espresso-primary hover:text-espresso-muted transition-colors tracking-wide"
             >
-              Private Enquiry
+              Contact
             </Link>
           </div>
 
-          <div className="md:col-span-3 flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="md:col-span-4 flex flex-col items-center text-center md:items-start md:text-left">
             <span className="text-[10px] uppercase font-mono tracking-[0.25em] text-gold-subtle font-semibold mb-2">
-              Conversations
+              Contact & Inquiries
             </span>
-            <p className="text-xs text-espresso-muted leading-relaxed mb-4">
-              We welcome early consultations for upcoming celebration seasons.
-            </p>
+            {siteConfig.phone && (
+              <a
+                href={`tel:${siteConfig.phone.replace(/[^0-9+]/g, "")}`}
+                className="inline-flex items-center gap-2 text-xs font-mono text-espresso-primary hover:text-espresso-muted transition-colors mb-2"
+              >
+                <Phone className="w-3.5 h-3.5 text-gold-subtle" />
+                <span>{siteConfig.phone}</span>
+              </a>
+            )}
+            {siteConfig.email && (
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex items-center gap-2 text-xs font-mono text-espresso-primary hover:text-espresso-muted transition-colors mb-4"
+              >
+                <Mail className="w-3.5 h-3.5 text-gold-subtle" />
+                <span>{siteConfig.email}</span>
+              </a>
+            )}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -86,8 +135,8 @@ export function Footer() {
         {/* Bottom Tier: Copyright & Disclaimers */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-espresso-muted text-center sm:text-left">
           <p>© {new Date().getFullYear()} {siteConfig.name}. All visual works protected.</p>
-          <p className="text-[11px] tracking-wide">
-            Fine Art Wedding & Editorial Photography Atelier
+          <p className="text-[11px] tracking-wide font-mono uppercase text-espresso-muted/80">
+            Professional Photography
           </p>
         </div>
       </div>

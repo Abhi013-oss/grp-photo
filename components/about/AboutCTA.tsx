@@ -20,12 +20,12 @@ export function AboutCTA() {
 
           {/* Heading */}
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-espresso-primary tracking-tight leading-[1.15] mb-5">
-            If the photographs matter to you, let&apos;s talk.
+            LET&apos;S CAPTURE YOUR STORY
           </h2>
 
           {/* Narrative */}
           <p className="font-sans text-xs sm:text-sm md:text-base text-espresso-muted max-w-xl font-light leading-relaxed mb-8">
-            Tell us about your celebration, your people, and the moments you want to remember. We accept a limited number of commissions each wedding season to give every family our complete presence and artistic dedication.
+            Planning a wedding, pre-wedding shoot or special celebration? Get in touch with Guri Rupal Photography to discuss your photography requirements.
           </p>
 
           {/* Dual Actions: WhatsApp Primary + Contact Form Secondary */}
@@ -37,7 +37,7 @@ export function AboutCTA() {
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-peach-soft hover:bg-peach-hover border border-peach-border text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.1em] transition-all duration-300 shadow-editorial hover:shadow-hover active:scale-[0.98]"
             >
               <MessageCircle className="w-4 h-4 text-[#1E7D34] group-hover:scale-110 transition-transform" />
-              <span>START A CONVERSATION ON WHATSAPP</span>
+              <span>CHAT ON WHATSAPP</span>
               <ArrowUpRight className="w-4 h-4 text-espresso-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
@@ -45,14 +45,14 @@ export function AboutCTA() {
               href="/contact"
               className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs font-mono tracking-widest uppercase text-espresso-primary hover:text-espresso-muted transition-colors"
             >
-              <span>OR SEND WRITTEN ENQUIRY</span>
+              <span>GET IN TOUCH</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
           {/* Reassurance note */}
           <p className="mt-6 text-[11px] font-mono text-espresso-muted/70 uppercase tracking-wider">
-            Direct conversation with Arjun & the VARA team · We look forward to hearing about your celebration
+            Guri Rupal Photography · Available for weddings, celebrations and photography sessions.
           </p>
         </div>
       </ScrollReveal>

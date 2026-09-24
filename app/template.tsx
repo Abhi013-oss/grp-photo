@@ -29,10 +29,10 @@ export default function Template({ children }: { children: React.ReactNode }) {
           className="flex flex-col items-center justify-center gap-2.5 px-6 text-center"
         >
           <span className="font-mono text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#B89762]">
-            FINE ART PHOTOGRAPHY & ARCHIVES
+            PROFESSIONAL PHOTOGRAPHY
           </span>
           <span className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#FAF8F5] tracking-wide italic font-normal">
-            Vara Stories
+            Guri Rupal Photography
           </span>
           <div className="w-28 h-[1.5px] bg-gradient-to-r from-transparent via-[#B89762] to-transparent mt-2" />
         </motion.div>

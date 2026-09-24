@@ -18,7 +18,7 @@ interface StoryPageProps {
   };
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://varastories.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || siteConfig.url || "https://photography2-indol.vercel.app";
 
 export async function generateStaticParams() {
   return portfolioStories.map((story) => ({

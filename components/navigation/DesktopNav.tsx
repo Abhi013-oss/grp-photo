@@ -11,7 +11,7 @@ interface DesktopNavProps {
 
 export function DesktopNav({ isScrolled }: DesktopNavProps) {
   const whatsappUrl = createWhatsAppLink({
-    customMessage: "Hi, I came across your photography studio website and would love to enquire about availability.",
+    customMessage: "Hello Guri Rupal Photography, I would like to enquire about your photography services.",
   });
 
   return (

@@ -20,12 +20,12 @@ export function HomepageContactCTA() {
 
           {/* Heading */}
           <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-espresso-primary tracking-tight leading-[1.12] mb-5">
-            Let&apos;s talk about what you&apos;re planning.
+            LET&apos;S CAPTURE YOUR STORY
           </h2>
 
           {/* Narrative */}
           <p className="font-sans text-sm sm:text-base text-espresso-muted max-w-xl font-light leading-relaxed mb-10">
-            Whether you are envisioning a multi-day royal celebration in Rajasthan, an intimate coastal gathering, or a fine art bridal monograph, we would love to learn about your celebration.
+            Planning a wedding, pre-wedding shoot or special celebration? Get in touch with Guri Rupal Photography to discuss your photography requirements.
           </p>
 
           {/* Dual Actions: WhatsApp Primary + Contact Page Secondary */}
@@ -37,7 +37,7 @@ export function HomepageContactCTA() {
               className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-peach-soft hover:bg-peach-hover border border-peach-border text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.1em] transition-all duration-300 shadow-editorial hover:shadow-hover active:scale-[0.98]"
             >
               <MessageCircle className="w-4 h-4 text-[#1E7D34] group-hover:scale-110 transition-transform" />
-              <span>START A CONVERSATION</span>
+              <span>CHAT ON WHATSAPP</span>
               <ArrowUpRight className="w-4 h-4 text-espresso-muted group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
@@ -45,7 +45,7 @@ export function HomepageContactCTA() {
               href="/contact"
               className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FAF8F5] hover:bg-[#FAF8F5]/80 border border-[#2C2523]/20 hover:border-[#2C2523]/60 text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.08em] transition-all duration-300 shadow-subtle"
             >
-              <span>SEND WRITTEN ENQUIRY</span>
+              <span>GET IN TOUCH</span>
               <ArrowRight className="w-4 h-4 text-espresso-muted group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

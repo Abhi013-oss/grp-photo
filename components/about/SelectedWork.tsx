@@ -20,17 +20,17 @@ export function SelectedWork() {
             </span>
           </div>
           <h2 className="font-serif text-3xl sm:text-5xl font-normal text-espresso-primary tracking-tight leading-[1.15] text-center">
-            Stories close to my heart.
+            RECENT WORK
           </h2>
           <p className="font-sans text-sm sm:text-base text-espresso-muted font-light leading-relaxed max-w-2xl mx-auto text-center">
-            A curated selection of Indian celebrations where ancestral rituals, architectural grandeur, and raw emotional truth converged.
+            A curated selection of celebrations capturing genuine moments, emotional truth, and personal stories.
           </p>
 
           <Link
             href="/portfolio"
             className="group inline-flex items-center justify-center gap-2 text-xs font-mono tracking-[0.2em] text-espresso-primary hover:text-gold-subtle transition-colors uppercase border-b border-espresso-primary hover:border-gold-subtle pb-1 mt-2"
           >
-            <span>VIEW ALL STORIES</span>
+            <span>VIEW PORTFOLIO</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

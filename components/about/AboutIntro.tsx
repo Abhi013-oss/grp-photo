@@ -16,12 +16,12 @@ export function AboutIntro() {
 
           {/* Heading */}
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] leading-[1.1] font-normal tracking-tight text-espresso-primary mb-6 text-center">
-            The person behind the photographs.
+            THE PERSON BEHIND THE CAMERA
           </h1>
 
           {/* Supporting Narrative */}
           <p className="font-sans text-sm sm:text-base md:text-lg text-espresso-muted leading-relaxed font-light max-w-2xl mx-auto text-center">
-            A thoughtful approach to documenting people, celebrations, and sacred family bonds across India. We believe genuine warmth and mutual trust create imagery that outlives generations.
+            Photography is about more than creating beautiful images. It is about preserving the emotions, connections and little moments that make each celebration personal. Guri Rupal Photography focuses on documenting those moments naturally and turning them into photographs you can return to for years to come.
           </p>
         </div>
       </ScrollReveal>

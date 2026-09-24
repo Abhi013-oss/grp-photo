@@ -33,7 +33,7 @@ export function FeaturedStory({ story }: FeaturedStoryProps) {
           {/* Floating Category Pill & Camera Gear */}
           <div className="absolute top-6 left-6 sm:top-8 sm:left-8 z-10 flex items-center gap-2.5">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FAF8F5]/90 backdrop-blur-md border border-[#2C2523]/10 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-espresso-primary">
-              FEATURED CELEBRATION
+              FEATURED PORTFOLIO
             </span>
             {story.coverImage.camera && (
               <span className="hidden sm:inline-flex items-center px-3 py-1.5 rounded-full bg-[#1A1615]/75 backdrop-blur-md text-[10px] font-mono tracking-wider text-[#FAF8F5]/90">
@@ -67,7 +67,7 @@ export function FeaturedStory({ story }: FeaturedStoryProps) {
 
             {/* View Story Action Button */}
             <div className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#FAF8F5]/90 hover:bg-[#FAF8F5] text-espresso-primary text-xs sm:text-sm font-medium tracking-[0.1em] transition-all duration-300 backdrop-blur-md self-start md:self-end shrink-0 shadow-sm group-hover:shadow-editorial">
-              <span>VIEW FULL STORY</span>
+              <span>VIEW PORTFOLIO</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </div>
           </div>

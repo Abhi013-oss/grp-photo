@@ -33,8 +33,8 @@ const destinationsData: DestinationRegion[] = [
     lightProfile: "Amber Golden Hour & Desert Twilight",
     description:
       "From the shimmering waters of Lake Pichola in Udaipur to the honey-colored sandstone bastions of Amber Fort and the rolling dunes of the Thar Desert, Rajasthan offers an imperial sanctuary for modern Indian celebrations.",
-    storySlug: "ananya-arjun-udaipur",
-    storyTitle: "Explore Udaipur Lake Palace Story",
+    storySlug: "weddings",
+    storyTitle: "View Wedding Portfolio",
     images: [
       {
         src: "/images/pro-destination-lake-palace-udaipur.jpg",
@@ -64,8 +64,8 @@ const destinationsData: DestinationRegion[] = [
     lightProfile: "Morning River Glow & Twilight 108-Flame Aarti",
     description:
       "The ancient stone steps of Kashi along Mother Ganga offer a transcendent spiritual canvas. Quiet dawn vows on wooden boats lead into evening celebrations illuminated by the sacred flames of Dashashwamedh Ghat.",
-    storySlug: "devika-vikram-varanasi",
-    storyTitle: "Explore Sacred Varanasi Story",
+    storySlug: "riverfront-sacred-ghats",
+    storyTitle: "View Riverfront Collection",
     images: [
       {
         src: "/images/destination-varanasi-morning-ghats.jpg",
@@ -95,8 +95,8 @@ const destinationsData: DestinationRegion[] = [
     lightProfile: "Diffused Coconut Canopy & Sunset Water Reflections",
     description:
       "A serene paradise where traditional wooden houseboats glide along tranquil canals. Sacred vows are embraced by ancestral Kasavu gold borders, aromatic jasmine, and the rhythmic sound of sacred temple nadaswarams.",
-    storySlug: "aarav-sanjana-kerala",
-    storyTitle: "Explore Kerala Backwaters Story",
+    storySlug: "serene-landscapes-houseboats",
+    storyTitle: "View Waterways Collection",
     images: [
       {
         src: "/images/destination-kerala-backwaters.jpg",
@@ -126,8 +126,8 @@ const destinationsData: DestinationRegion[] = [
     lightProfile: "Crisp Alpine Luminosity & Blue Mountain Dawns",
     description:
       "From the mirror-still waters of Kashmir's Dal Lake to the rugged moonscapes and azure depths of Pangong Tso in Ladakh, Northern India provides a monumental stage for pre-wedding cinematic expeditions.",
-    storySlug: "nandini-raghav-jaisalmer",
-    storyTitle: "Explore High-Altitude Expeditions",
+    storySlug: "desert-horizons-golden-dunes",
+    storyTitle: "View Desert & Dunes Collection",
     images: [
       {
         src: "/images/destination-ladakh-pangong-lake.jpg",

@@ -1,13 +1,23 @@
 import { SiteConfig } from "@/lib/types";
 
 export const siteConfig: SiteConfig = {
-  name: "VARA STORIES",
-  tagline: "Bespoke Indian Wedding & Celebration Storytelling",
+  name: "Guri Rupal Photography",
+  tagline: "Professional Photography",
   description:
-    "An editorial photography studio preserving the quiet emotion, sacred rituals, and royal grandeur of modern Indian celebrations.",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919876543210",
-  locations: ["Jaipur", "Udaipur", "Delhi NCR", "Goa", "Worldwide"],
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://varastories.com",
+    "Capturing genuine emotions, meaningful connections and unforgettable celebrations through photography.",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919815290715",
+  phone: "+91 98152 90715",
+  email: "guristudio34@gmail.com",
+  address: "3270, Sector 27D, Chandigarh, 160019",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Guri+Rupal+Photography+Sector+27D+Chandigarh",
+  socialLinks: {
+    instagram: "https://www.instagram.com/gurirupalphotography/",
+    facebook: "https://www.facebook.com/GuriRupalPhotography",
+    youtube: "https://www.youtube.com/@GuriRupalPhotography",
+  },
+  locations: ["Available for weddings, celebrations and photography sessions."],
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://photography2-indol.vercel.app",
   navItems: [
     { label: "WORK", href: "/portfolio" },
     { label: "SERVICES", href: "/services" },
