@@ -5,11 +5,11 @@ export const photographerData: PhotographerProfile = {
   role: "Photographer & Founder",
   studioName: "Guri Rupal Photography",
   portrait: {
-    src: "/images/photo-1506794778202-cad84cf45f1d.jpg",
+    src: "/images/guri-rupal-portrait.jpg",
     alt: "Guri Rupal, Photographer & Founder of Guri Rupal Photography",
-    width: 1600,
-    height: 2000,
-    objectPosition: "center 25%",
+    width: 682,
+    height: 1024,
+    objectPosition: "center 20%",
   },
   shortIntro:
     "Photography is about more than creating beautiful images. It is about preserving the emotions, connections and little moments that make each celebration personal.",

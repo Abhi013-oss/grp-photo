@@ -3,6 +3,8 @@ import { SiteConfig } from "@/lib/types";
 export const siteConfig: SiteConfig = {
   name: "Guri Rupal Photography",
   tagline: "Professional Photography",
+  logo: "/images/logo-cropped.png",
+  logoTransparent: "/images/logo-transparent.png",
   description:
     "Capturing genuine emotions, meaningful connections and unforgettable celebrations through photography.",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919815290715",

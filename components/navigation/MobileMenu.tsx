@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/data/site";
@@ -66,14 +67,15 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         >
           {/* Top Bar inside Menu */}
           <div className="flex items-center justify-between border-b border-[#2C2523]/10 pb-6 flex-shrink-0">
-            <div>
-              <span className="font-serif text-xl tracking-[0.2em] font-medium text-espresso-primary">
-                {siteConfig.name}
-              </span>
-              <p className="text-[10px] uppercase tracking-[0.18em] text-espresso-muted mt-0.5">
-                Editorial Photography
-              </p>
-            </div>
+            <Link href="/" onClick={onClose} className="flex items-center" aria-label={`${siteConfig.name} Home`}>
+              <Image
+                src={siteConfig.logo || "/images/logo-cropped.png"}
+                alt={siteConfig.name}
+                width={130}
+                height={90}
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
             <button
               type="button"
               onClick={onClose}

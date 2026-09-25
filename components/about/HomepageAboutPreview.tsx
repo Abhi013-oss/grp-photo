@@ -20,9 +20,8 @@ export function HomepageAboutPreview() {
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   quality={90}
                   className="object-cover"
-                  style={{ objectPosition: photographerData.portrait.objectPosition || "center 25%" }}
+                  style={{ objectPosition: photographerData.portrait.objectPosition || "center 20%" }}
                 />
-                <div className="absolute inset-0 bg-[#2C2523]/10" />
               </div>
               <div className="mt-4 text-center sm:text-left max-w-md mx-auto">
                 <span className="font-mono text-[11px] tracking-widest text-espresso-muted uppercase">

@@ -76,6 +76,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
@@ -106,6 +110,8 @@ export default function RootLayout({
         "@id": `${siteUrl}/#service`,
         name: siteConfig.name,
         url: siteUrl,
+        logo: `${siteUrl}/images/logo-cropped.png`,
+        image: `${siteUrl}/images/logo-cropped.png`,
         telephone: siteConfig.phone,
         email: siteConfig.email,
         description: siteConfig.description,
@@ -120,6 +126,7 @@ export default function RootLayout({
           "@type": "Person",
           name: photographerData.name,
           jobTitle: photographerData.role,
+          image: `${siteUrl}/images/guri-rupal-portrait.jpg`,
         },
         sameAs: [
           siteConfig.socialLinks?.instagram,

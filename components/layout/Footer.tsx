@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { createWhatsAppLink } from "@/lib/whatsapp";
 import { MessageCircle, ArrowUpRight, MapPin, Phone, Mail, Instagram, Youtube, Facebook } from "lucide-react";
@@ -14,9 +15,19 @@ export function Footer() {
         {/* Top Tier: Brand Statement & Contact Bridge */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-[#2C2523]/10">
           <div className="md:col-span-5 flex flex-col items-center text-center md:items-start md:text-left">
-            <span className="font-serif text-2xl sm:text-3xl tracking-[0.15em] font-medium text-espresso-primary mb-2">
-              {siteConfig.name}
-            </span>
+            <Link
+              href="/"
+              className="mb-4 inline-block group"
+              aria-label={`${siteConfig.name} Home`}
+            >
+              <Image
+                src={siteConfig.logo || "/images/logo-cropped.png"}
+                alt={siteConfig.name}
+                width={160}
+                height={112}
+                className="h-14 sm:h-16 w-auto object-contain transition-opacity group-hover:opacity-85"
+              />
+            </Link>
             <span className="text-[11px] font-mono tracking-widest text-gold-subtle uppercase font-semibold mb-3">
               Guri Rupal · Photographer & Founder
             </span>

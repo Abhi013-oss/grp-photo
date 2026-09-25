@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { DesktopNav } from "./DesktopNav";
 import { MobileMenu } from "./MobileMenu";
@@ -24,23 +25,25 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-luxury ${
           isScrolled
-            ? "bg-[#FAF8F5]/92 backdrop-blur-md border-b border-[#2C2523]/8 py-4 shadow-subtle"
-            : "bg-gradient-to-b from-[#FAF8F5]/80 via-[#FAF8F5]/30 to-transparent py-6"
+            ? "bg-[#FAF8F5]/92 backdrop-blur-md border-b border-[#2C2523]/8 py-3.5 shadow-subtle"
+            : "bg-gradient-to-b from-[#FAF8F5]/80 via-[#FAF8F5]/30 to-transparent py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
           {/* Logo / Brandmark */}
           <Link
             href="/"
-            className="group flex flex-col focus-visible:outline-none"
+            className="group flex items-center focus-visible:outline-none"
             aria-label={`${siteConfig.name} Home`}
           >
-            <span className="font-serif text-xl sm:text-2xl tracking-[0.25em] font-medium text-espresso-primary transition-opacity group-hover:opacity-80">
-              {siteConfig.name}
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.28em] text-espresso-muted -mt-0.5">
-              Fine Art Photography
-            </span>
+            <Image
+              src={siteConfig.logo || "/images/logo-cropped.png"}
+              alt={`${siteConfig.name} Logo`}
+              width={140}
+              height={98}
+              priority
+              className="h-10 sm:h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
+            />
           </Link>
 
           {/* Desktop Navigation */}

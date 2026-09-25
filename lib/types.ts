@@ -134,6 +134,8 @@ export type SiteConfig = {
   locations: string[];
   navItems: NavItem[];
   url?: string;
+  logo?: string;
+  logoTransparent?: string;
   phone?: string;
   email?: string;
   address?: string;
